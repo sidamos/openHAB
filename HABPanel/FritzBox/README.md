@@ -1,7 +1,3 @@
-# openHAB
-
-## HABPanel
-
 ### FritzBox Call Monitor
 Code and icons taken from https://community.openhab.org/t/fritzbox-call-overview/28430 (version by @vbier). CSS taken from https://community.openhab.org/t/custom-theme-in-habpanel-2-1-example/31100.
 Thanks to the contributors of the thread and special thanks to @vbier.
