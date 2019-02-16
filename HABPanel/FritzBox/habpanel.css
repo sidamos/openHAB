@@ -1,0 +1,219 @@
+
+.section .hueSelect {
+  width: 33%;
+  padding-right: 70px;
+}
+
+.section .widget {
+    width: 33%;
+    float: left;
+}
+.section .widget.wide {
+    width: 33%;
+    float: left;
+}
+.section .bigDash {
+    margin-left: auto;
+    width: 33%;
+    min-width: 320px;
+    margin-right: auto;
+}
+.header a {
+    display: inline;
+}
+
+.section {
+	width: 100%;
+	background: #19201c;
+	padding: 20px 20px 10px 20px;
+	overflow: hidden;
+	margin-bottom: 20px;
+	margin-right: 20px;	
+	float: left;
+	text-align: left;
+	color: white;
+}
+.section a {
+  color: #ff2c0a;
+}
+.section .title {
+	clear: left;
+	overflow: auto;
+  	zoom: 1;
+}
+.section .title  {
+	font-size: 30px;
+	font-weight: 100;
+	text-transform: uppercase;
+	padding-bottom: 20px;
+}
+.section .sub-title {
+    font-size: 20px;
+    text-transform: uppercase;
+    padding-bottom: 10px;
+    padding-top: 10px;
+    color: #26bf75;
+    clear: both;
+}
+.section .title .name {
+	font-size: 30px;
+	font-weight: 100;
+	display: inline-block;
+	float: left;
+}
+.section .title .summary {
+	display: inline-block;
+    float: left;
+    border: 1px solid #565f58;
+    border-radius: 5px;
+    padding: 4px 10px 2px 10px;
+    font-size: 16px;
+    color: #565f58;
+    margin-left: 20px;
+    font-weight: 300;
+    margin-top: 5px;
+}
+.section .sectionIconContainer {
+	position: relative;
+	width: 100%;
+}
+.section .sectionIcon {
+	width: 50px;
+	height: 50px;
+	position: absolute;
+	right: 0px;
+}
+.section .sectionIcon svg {
+    stroke: #565f58;
+    fill: #565f58;
+    stroke-width: 1px;
+}
+
+.section .widget {
+  cursor: pointer;
+}
+.section .widget .icon {
+	width: 30px;
+	height: 30px;
+	margin-right: 10px;
+	float: left;
+}
+.section .icon svg, .section .control svg {
+  stroke-width: 2px;
+}
+.section .icon.off svg {
+  stroke: #565f58;
+  fill: #565f58;
+}
+.section .icon.on svg {
+  stroke: #26bf75;
+  fill: #26bf75;
+}
+.section .icon.warn svg {
+  stroke: #ff2c0a;
+  fill: #ff2c0a;
+  animation: blinker 1s linear infinite;
+}
+.section .icon.blink svg {
+  stroke: #00afb8;
+  fill: #00afb8;
+	animation: blinker 1s linear infinite;
+}
+@keyframes blinker {  
+	50% { opacity: 0; }
+}	
+.section .icon.wind svg {
+  stroke: #565f58;  
+  fill: #565f58;  
+}
+.section .icon.on.wind svg {
+  stroke: #26bf75;  
+  fill: #26bf75;  
+}
+.section .icon.wind {
+  	animation: windy 0.5s ease-in-out infinite;
+}
+@keyframes windy {
+    0% {
+        transform: rotate(180deg);
+    }
+    50% {
+        transform: rotate(200deg);
+    }
+    100% {
+        transform: rotate(180deg);
+    }
+}
+
+.section .widget select {
+    background: rgba(0,0,0,0);
+    border: 0px;
+    outline: none;
+    text-align: right;
+    text-align-last: right;
+}
+
+.section .widget.disabled {
+  opacity: 0.2;
+}
+.section .widget.disabled:active .icon svg {
+  stroke: #565f58;
+  fill: #565f58;
+}
+.section .widget.disabled:active .name {
+  color:  white;
+}
+.section .widget.disabled .control:active {
+  background-color: #393d3a;
+}
+
+.section .widget:active .icon svg {
+  stroke: #fff;
+  fill: #fff;
+	-webkit-transition: 0.2s;
+}
+.section .widget:active .name {
+  color:  #565f58;
+  fill:  #565f58;
+	-webkit-transition: 0.2s;
+}
+
+
+.section .widget.wide .name {
+	width: 250px;
+}
+.section .widget .name {
+	height: 35px;
+	padding-top: 6px;
+  padding-right: 5px;
+	float: left;
+	text-transform: uppercase;
+	font-weight: 100;
+}
+.section .widget .name .value {
+	color: #26bf75;
+	font-weight: bold;
+	text-align: left;	
+}
+
+.section .widget .valueGroup {
+	padding-right: 20px;
+  min-height: 35px;  
+}
+.section .widget .valueGroup .value {
+	text-align: right;
+	padding-top: 6px;
+	/*color: #26bf75;*/
+	font-weight: bold;
+}
+.section .widget .valueGroup .value.warning {
+    color: #ff2c0a;
+    font-weight: 600;
+}
+.section .widget .valueGroup .value.active {
+    color: #00afb8;
+}
+.section .widget .valueGroup .value:nth-child(n+2) {
+	color: #1d4d3b;	
+}
+

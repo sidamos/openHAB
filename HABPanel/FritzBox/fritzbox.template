@@ -1,0 +1,21 @@
+<div class="section">
+  <div class="title"><div class="name">Fritzbox</div></div>
+  <div class="controls">
+    <div class="widget">
+			<div class="name">Verpasste Anrufe</div>
+			<div class="valueGroup"><div class="value">{{itemValue('fboxMissedCalls')}}</div></div>
+  	</div>
+    <div class="widget">
+			<div class="name">Anrufbeantworter</div>
+			<div class="valueGroup"><div class="value">{{itemValue('fboxTAM0NewMsg')}}</div></div>
+  	</div>
+    <div class="widget" ng-if="itemValue('fboxIncomingCallResolved') != 'NULL'">
+			<div class="name">Anruf von</div>
+			<div class="valueGroup"><div class="value">{{itemValue('fboxIncomingCallResolved')}}</div></div>
+  	</div>
+  </div>
+</div>
+<div oc-lazy-load="['/static/habpanel-reload.js']">
+  <div ng-controller="MyWidgetCtrl as myctrl" ng-include="'/static/calloverview.html?date=' + myctrl.listDate">
+  </div>
+</div>

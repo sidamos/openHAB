@@ -1,0 +1,20 @@
+rule "Generate Call Overview"
+when
+   Item fboxIncomingCall changed or
+   Item fboxOutgoingCall changed 
+then
+   if ((fboxIncomingCall.state.toString == ",") && (fboxOutgoingCall.state.toString == ",") && (previousState.toString != ",")) {
+     Thread::sleep(3000)
+     executeCommandLine("PATH/fritzbox.sh update", 30000)
+     ListDate.postUpdate(now.millis);
+   }
+end
+
+rule "Play recorded call"
+when
+   Item AbMessage received command
+then
+   playSound(receivedCommand.toString)
+   executeCommandLine("PATH/fritzbox.sh mark " + receivedCommand.toString)
+end
+
