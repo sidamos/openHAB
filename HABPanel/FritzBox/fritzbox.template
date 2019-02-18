@@ -9,7 +9,7 @@
 			<div class="name">Anrufbeantworter</div>
 			<div class="valueGroup"><div class="value">{{itemValue('fboxTAM0NewMsg')}}</div></div>
   	</div>
-    <div class="widget" ng-if="itemValue('fboxIncomingCallResolved') != 'NULL'">
+    <div class="widget" ng-if="itemValue('fboxIncomingCallResolved') != 'NULL' && itemValue('fboxIncomingCallResolved') != ','">
 			<div class="name">Anruf von</div>
 			<div class="valueGroup"><div class="value">{{itemValue('fboxIncomingCallResolved')}}</div></div>
   	</div>
