@@ -9,7 +9,7 @@ Installation:
 * add the items and the rules
 * copy **fritzbox.sh** and **lockRoutines** to some place (change BASEURL, USER, OPENHAB_DIR) and make them executable by the openHAB user
 * change the path to **fritzbox.sh** in **fritzbox.rules**
-* copy **fritzbox.svg**, **habpanel.css** and **habpanel-reload.js** to **conf/html**
+* copy **fritzbox.svg**, **habpanel.css** and **habpanel-reload.js** to **conf/html** (this is the root html folder and is located add **/static** in the browser)
 * use **/static/habpanel.css** as "Additional stylesheet" in HABPanel config
 * add a new Template Widget in HABPanel using **fritzbox.template**
 * receive one call to initialize everything
